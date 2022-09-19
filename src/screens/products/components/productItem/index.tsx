@@ -11,7 +11,6 @@ type ProductItemProps = {
   item: product;
 };
 const ProductItem = ({item}: ProductItemProps) => {
-  console.log('pr_item', item.id);
   const dispatch = useDispatch();
   const [isProductOnCart, setIsProductOnCart] = useState(false);
   const {title, image, price} = item;
@@ -35,7 +34,7 @@ const ProductItem = ({item}: ProductItemProps) => {
           style={productItemStyles.cartBtn}
           onPress={onCartAction}>
           <Text style={productItemStyles.cartBtnLabel}>
-            {isProductOnCart ? `Remove from Cart` : `Add to Cart`}
+            {isProductOnCart ? 'Remove from Cart' : 'Add to Cart'}
           </Text>
         </TouchableOpacity>
       </View>
